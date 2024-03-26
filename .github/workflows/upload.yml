@@ -1,0 +1,21 @@
+name: Google Cloud Storage Bucket Sync (GCP,GCS)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Sync
+        uses: patrickwyler/gcs-bucket-sync-action@1.4
+        with:
+          secrets: ${{ secrets.google_service_account_credentials }}
+          bucket: 'data-banks-bucket'
+          sync_dir_from: 'data/Cloud_Upload/'
+          # exclude: '.*\.md$|\.gitignore$|\.git/.*$|\.github/.*$'
