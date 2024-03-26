@@ -5,3 +5,7 @@ https://data-banks.streamlit.app
 Ejemplo de uso Para el Segundo Modelo. Ingresar estos como el user_id
 Plan FreshStart: 1.030135e+20
 Plan ElitePlus: 1.059413e+20
+
+Link al video del despliegue
+
+https://www.youtube.com/watch?v=gmSrEYkBbn0
